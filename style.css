@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+body{
+    background-color: hsl(226, 43%, 10%);
+}
+/* styles for screens smaller than  */
+.master-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 20px auto;
+    row-gap: 20px;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    row-gap: inherit;
+}
+#report{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 50%, 29%);
+    border-radius: 12px;
+    height: 180px;
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+}
+#report-row-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background-color: hsl(246, 80%, 60%);
+    padding: 20px;
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+    height: 70%;
+    border-radius: 12px;
+}
+#report-row-1 div h2{
+    color: #f0f8ff;
+    font-weight: 300;
+    font-size: 25px;
+}
+#report-row-2{
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+    justify-content: center;
+    text-align: center;
+}
+.activities{
+    height: 150px;
+    width: inherit;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: inherit;
+    min-width: inherit;
+}
+.activities-row-2{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 50%, 29%);
+    border-radius: 12px;
+    justify-content: space-around;
+    padding: 20px;
+    height: 70%;
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+}
+.activities-row-2:hover{
+    cursor: pointer;
+    background-color: hsl(235, 47%, 50%);
+    transition:  .3s ;    
+}
+.activities-row-2 .activity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activities-time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* default styles on all screen sizes */
+#image-container{
+    width: fit-content;
+    cursor: pointer;
+}
+#report-image{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+#report-row-2 h4{
+    color: #5c82a8;
+    margin-right: 35px;
+    width: fit-content;
+}
+#report-row-2 h4:hover{
+    color: #f0f8ff;
+    cursor: pointer;
+    transition: .1s;
+}
+.activities-row-2 .activities-time h1{
+    color: #f0f8ff;
+    font-size: 35px;
+    font-weight: 500;
+}
+.activities-row-2 .activity div img{
+    cursor: pointer;
+}
+.activities-row-2 div h4{
+    color: #f0f8ff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.work{
+    background-color: hsl(15, 100%, 70%);
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.play{
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.study{
+    background-color: hsl(348, 100%, 68%);
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.exercise{
+    background-color: hsl(145, 58%, 55%);
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.social{
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.self-care{
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+h5{
+    color: #acb2b8;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+/* responsive styles for screen size larger than 750px(laptops,ipads,televisions,etc */
+
+@media screen and (min-width: 900px){
+    
+    #report{
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(235, 50%, 29%);
+        border-radius: 12px;
+        min-height: 300px;
+        min-width: 200px;
+        height: 400px;
+        width: 200px;
+    }
+    #report-image{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: solid 2px white;
+    }
+    .master-container{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 95vh;
+        gap: 30px;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        grid-gap: 10px;
+    }
+    #image-container{
+        width: fit-content;
+    }
+    #report-row-1{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        background-color: hsl(246, 80%, 60%);
+        padding: 20px;
+        width: inherit;
+        height: 70%;
+        border-radius: 12px;
+    }
+    #report-row-2{
+        color: aliceblue;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #report-row-2 h4{
+        color: #acb2b8;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+    #report-row-2 h4:hover{
+        color: #f0f8ff;
+        cursor: pointer;
+        transition: .1s;
+    }
+    h5{
+        color: #acb2b8;
+        font-weight: 300;
+    }
+    #report-row-1 div h2{
+        color: #f0f8ff;
+        font-weight: 400;
+        font-size: 35px;
+    }
+    .activities{
+        height: 200px;
+        width: 200px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .activities-row-2{
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(235, 50%, 29%);
+        border-radius: 12px;
+        justify-content: space-around;
+        padding: 20px;
+        height: 160px;
+        width: inherit;
+    }
+    .activities-row-2:hover{
+        cursor: pointer;
+        background-color: hsl(235, 47%, 50%);
+        transition:  .3s ;    
+    }
+    .activities-row-2 div h4{
+        color: #f0f8ff;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .activities-row-2 .activity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .activities-row-2 h1{
+        color: #f0f8ff;
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .activities-time{
+        display: flex;
+        flex-direction: column;
+    }
+    .work{
+        background-color: hsl(15, 100%, 70%);
+        background-image: url(images/icon-work.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .play{
+        background-color: hsl(195, 74%, 62%);
+        background-image: url(images/icon-play.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .study{
+        background-color: hsl(348, 100%, 68%);
+        background-image: url(images/icon-study.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .exercise{
+        background-color: hsl(145, 58%, 55%);
+        background-image: url(images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .social{
+        background-color: hsl(264, 64%, 52%);
+        background-image: url(images/icon-social.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .self-care{
+        background-color: hsl(43, 84%, 65%);
+        background-image: url(images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    .attribution { 
+        font-size: 11px; text-align: center;
+    }
+    .attribution a {
+        color: hsl(228, 45%, 44%); 
+    }
+}
